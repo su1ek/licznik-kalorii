@@ -1,0 +1,83 @@
+body{
+    margin: 0px;
+    background-color: rgb(120, 118, 118);
+}
+#container{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: 500px;
+    margin: 20px;
+    display: block;
+}
+h1{
+    text-align: center;
+    font-size: 4em;
+}
+label{
+    display: block;
+    font-size: 2rem;
+    float: left;
+    padding: 5px 5px;
+}
+#dodaj{
+    background-color: cadetblue;
+    color: white;
+    padding: 10px 15px;
+    width: 150px;
+    font-size: 2rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    margin: 15px;
+}
+#dodaj:hover{
+    background-color: rgb(65, 108, 110);
+}
+#dodaj:active{
+    background-color: rgb(40, 65, 67);
+}
+#reset{
+    background-color: rgb(220, 61, 33);
+    color: white;
+    padding: 10px 15px;
+    width: 150px;
+    font-size: 2rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    margin: 15px;
+}
+#reset:hover{
+    background-color: rgb(142, 42, 24);
+}
+#reset:active{
+    background-color: rgb(85, 26, 16);
+}
+input{
+    display: inline-block;
+    float: right;
+    text-align: center;
+    width: 200px;
+    font-size: 2rem;
+    margin: 5px;
+    font-weight: bold;
+}
+#lista li {
+    margin: 5px 0 5px 1em;
+    padding-left: 6px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#lista li::marker {
+    color: chocolate;
+    font-weight: 900;
+    transition: color 0.3 ease-in-out;
+    font-family: 'Font Awesome 6 Free';
+    content: '\f058';
+}
+
+#lista li:hover::marker {
+    color: white;
+}

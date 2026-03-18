@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Licznik kalorii</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div id="container">
+
+        <h1>Licznik kalorii</h1>
+
+        <label for="produkt">Produkt</label>
+        <input type="text" id="produkt"> <br> <br>
+        <label for="kalorie">Liczba kalorii</label>
+        <input type="number" id="kalorie"> <br> <br>
+        <button type="submit" id="dodaj" onclick="pobierz()">Dodaj</button>
+        <button type="reset" id="reset" onclick="resetuj()">Reset</button>
+        <ul id="lista">
+        </ul>
+
+        <p id="wszystkieKalorie"></p>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
