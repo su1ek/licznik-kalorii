@@ -1,22 +1,24 @@
+*{
+    box-sizing: border-box;
+}
 body{
     margin: 0px;
     background-color: rgb(120, 118, 118);
 }
 #container{
+    text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     width: 500px;
-    margin: 20px;
-    display: block;
+    margin: 20px auto;
 }
 h1{
     text-align: center;
     font-size: 4em;
 }
 label{
-    display: block;
     font-size: 2rem;
-    float: left;
     padding: 5px 5px;
+    margin-bottom: 15px;
 }
 #dodaj{
     background-color: cadetblue;
@@ -54,30 +56,82 @@ label{
 #reset:active{
     background-color: rgb(85, 26, 16);
 }
-input{
-    display: inline-block;
-    float: right;
-    text-align: center;
+#najwiekszy{
+    background-color: gold;
+    color: white;
+    padding: 10px 15px;
     width: 200px;
     font-size: 2rem;
-    margin: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
     font-weight: bold;
+    margin: 15px;
+}
+#najwiekszy:hover{
+    background-color: rgb(183, 157, 6);
+}
+#najwiekszy:active{
+    background-color: rgb(115, 99, 5);
+}
+#najmniejszy{
+    background-color: rgb(74, 163, 91);
+    color: white;
+    padding: 10px 15px;
+    width: auto;
+    font-size: 2rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    margin: 15px;
+}
+#najmniejszy:hover{
+    background-color: rgb(50, 113, 62);
+}
+#najmniejszy:active{
+    background-color: rgb(50, 113, 62);
+}
+input{
+    width: 150px;
+    height: 2rem;
+    font-size: 2rem;
+    margin: 5px;
+    padding: 5px;
+    font-weight: bold;
+    margin-bottom: 15px;
 }
 #lista li {
     margin: 5px 0 5px 1em;
-    padding-left: 6px;
+    padding: 0;
+    list-style: none;
     font-size: 1.5rem;
     font-weight: 600;
 }
 
-#lista li::marker {
-    color: chocolate;
-    font-weight: 900;
-    transition: color 0.3 ease-in-out;
-    font-family: 'Font Awesome 6 Free';
-    content: '\f058';
+.najwiekszy {
+    background-color: rgb(219, 196, 63);
+    border: 2px solid gold !important;
+    transform: scale(1.02);
+    transition: 0.3s;
 }
 
-#lista li:hover::marker {
-    color: white;
+.najwiekszy::before{
+    color: gold !important;
+}
+
+.input-group{
+    display: flex;
+    justify-content:space-around;
+}
+
+.najmniejszy {
+    background-color: rgb(74, 163, 91);
+    border: 2px solid rgb(43, 93, 52) !important;
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+
+.najmniejszy::before{
+    color: rgb(74, 163, 91) !important;
 }
