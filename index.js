@@ -9,7 +9,7 @@ const lista = document.getElementById("lista");
 let totalCalories = 0;
 
 produkty.forEach(wyswietl);
-wyszukajNajwiekszy();
+// wyszukajNajwiekszy();
 
 function wyswietl(wpis){
     const nowyProdukt = document.createElement("li");
@@ -23,7 +23,7 @@ function wyswietl(wpis){
         this.remove();
         const index = produkty.indexOf(wpis); //ustalenie indexu zeby działał splice
         produkty.splice(index, 1);
-        wyszukajNajwiekszy();
+        // wyszukajNajwiekszy();
         zapisDoLocalStorage();
         totalCalories = totalCalories - wpis.kcal;
         wszystkieKalorie.textContent = `Liczba kalorii wynosi: ${totalCalories}`;
@@ -56,7 +56,7 @@ function pobierz(){
     kalorie.value = "";
 
     wyswietl(nowyWpis);
-    wyszukajNajwiekszy();
+    // wyszukajNajwiekszy();
 }
 
 function resetuj(){
@@ -89,4 +89,18 @@ function wyszukajNajwiekszy(){
     const elementLidera = document.querySelector(`li[data-id="${lider.id}"]`);
     if (elementLidera)
         elementLidera.classList.add('najwiekszy');
+}
+
+function wyszukajNajmniejszy(){
+    document.querySelectorAll('li').forEach(li => li.classList.remove('najmniejszy'));
+
+    if (produkty.length === 0)
+        return;
+
+    const frajer = produkty.reduce((min,obecny) => {
+        return (obecny.kcal < min.kcal) ? obecny : min;
+    })
+    const elementFrajera = document.querySelector(`li[data-id="${frajer.id}"]`);
+    if (elementFrajera)
+        elementFrajera.classList.add('najmniejszy');
 }
