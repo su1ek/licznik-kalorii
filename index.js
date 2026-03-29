@@ -23,7 +23,8 @@ function wyswietl(wpis){
         this.remove();
         const index = produkty.indexOf(wpis); //ustalenie indexu zeby działał splice
         produkty.splice(index, 1);
-        // wyszukajNajwiekszy();
+        wyszukajNajwiekszy();
+        wyszukajNajmniejszy();
         zapisDoLocalStorage();
         totalCalories = totalCalories - wpis.kcal;
         wszystkieKalorie.textContent = `Liczba kalorii wynosi: ${totalCalories}`;

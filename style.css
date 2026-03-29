@@ -3,6 +3,7 @@
 }
 body{
     margin: 0px;
+    padding: 0px;
     background-color: rgb(120, 118, 118);
 }
 #container{
@@ -104,8 +105,9 @@ input{
     margin-bottom: 15px;
 }
 #lista li {
-    margin: 5px 0 5px 1em;
-    padding: 0;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
     list-style: none;
     font-size: 1.5rem;
     font-weight: 600;
